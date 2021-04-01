@@ -8,7 +8,7 @@ export const movieController = {
     },
 
     id: async (req, res) => {
-        res.json (await movie.findById(req.params.id,{
+        res.json (await movie.findById(req.id,{
             id : req.body.id 
         }))
     },

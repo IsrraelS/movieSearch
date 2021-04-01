@@ -12,7 +12,6 @@ const movieSchema = new mongoose.Schema({
     year : {
         type : Number
     }
-
 })
 
 const movie = mongoose.model('Movie', movieSchema);

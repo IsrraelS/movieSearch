@@ -1,7 +1,7 @@
 import user from '../models/user.model.js';
 
 export const userController = {
-    read: async (req, res) =>{
+    read: async (req, res) => {
         res.json (await user.find()) 
     },
 
