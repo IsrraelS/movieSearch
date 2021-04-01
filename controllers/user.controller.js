@@ -14,7 +14,7 @@ export const userController = {
             id : req.body.id,
             name : req.body.name,
             lastname: req.body.lastname,
-            email : req.body.emal,
+            email : req.body.email,
             dni : req.body.dni
         }))
     },
