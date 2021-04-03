@@ -1,13 +1,12 @@
-import { ObjectID } from 'bson';
 import mongoose from 'mongoose';
 
-const orderSchema = new mongoose.Schema({
+const ordersSchema = new mongoose.Schema({
     user : {
-        type : ObjectID
+        type : mongoose.Types.ObjectId
     },
 
     itemTitle : {
-        type : ObjectID
+        type : mongoose.Types.ObjectId
     },
 
     orderTitle : {

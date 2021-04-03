@@ -5,7 +5,7 @@ const movieSchema = new mongoose.Schema({
         type : String
     },
 
-    genere : {
+    generes : {
         type : String
     },
 
