@@ -15,11 +15,19 @@ export const userController = {
             name : req.body.name,
             lastname: req.body.lastname,
             email : req.body.email,
-            dni : req.body.dni
+            dni : req.body.dni,
+            password : req.body.password
         }))
     },
 
     delete: async (req, res) => {
         res.json (await user.findByIdAndDelete(req.params.id))
-    }
+    },
+
+    login: async (req, res) =>{
+        res.json (await user.find({
+            email : req.headers.email,
+            password : req.headers.password
+        }))
+    } 
 }    

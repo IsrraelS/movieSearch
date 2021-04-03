@@ -7,5 +7,6 @@ userRoutes.get("/read", userController.read)
 userRoutes.post("/create", userController.create)
 userRoutes.put('/update/:id', userController.update)
 userRoutes.delete('/delete/:id', userController.delete)
+userRoutes.post('/login', userController.login)
 
 export default userRoutes;

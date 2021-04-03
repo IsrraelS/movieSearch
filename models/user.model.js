@@ -22,6 +22,12 @@ const userSchema = new mongoose.Schema({
     checkIn : {
         type : String
     },
+
+    password : {
+        type : String,
+        require : [true, 'el password es requerido'],
+        unique : true
+    }
 })
 
 const user = mongoose.model('User', userSchema);
