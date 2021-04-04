@@ -25,14 +25,11 @@ export const userController = {
     },
 
     login: async (req, res) =>{
-        const userDataBase = await user.find({
-            email : req.headers.email,
-            password : req.headers.password})
-            if (userDataBase.email === req.headers.email || userDataBase.password === req.headers.password){    
+        const userDataBase = await user.find()
+            if (userDataBase.email === req.headers.email && userDataBase.password === req.headers.password){    
                 res.sendStatus(200)
             } else {
                 res.sendStatus(401)
             }
-        
     } 
 }    
